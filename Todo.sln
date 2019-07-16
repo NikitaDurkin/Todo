@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.API", "Todo.API\Todo.API.csproj", "{8855922C-6DBE-4B0C-887D-C7A25354B471}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Database", "Todo.Database\Todo.Database.csproj", "{A4523FF2-EE49-4F7F-8E7C-CD6B592043F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Domain", "Todo.Domain\Todo.Domain.csproj", "{D2FEEC71-839E-4E6B-A9D8-4360609B37D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8855922C-6DBE-4B0C-887D-C7A25354B471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8855922C-6DBE-4B0C-887D-C7A25354B471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8855922C-6DBE-4B0C-887D-C7A25354B471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8855922C-6DBE-4B0C-887D-C7A25354B471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4523FF2-EE49-4F7F-8E7C-CD6B592043F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4523FF2-EE49-4F7F-8E7C-CD6B592043F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4523FF2-EE49-4F7F-8E7C-CD6B592043F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4523FF2-EE49-4F7F-8E7C-CD6B592043F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2FEEC71-839E-4E6B-A9D8-4360609B37D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2FEEC71-839E-4E6B-A9D8-4360609B37D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2FEEC71-839E-4E6B-A9D8-4360609B37D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2FEEC71-839E-4E6B-A9D8-4360609B37D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
