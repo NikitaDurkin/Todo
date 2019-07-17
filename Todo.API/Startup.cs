@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Identity;
 using Todo.Database.Models;
 using Todo.Database.Resources;
 using Todo.Domain.Extensions;
-using Todo.Domain.Models.User;
 
 
 namespace Todo
@@ -80,20 +79,3 @@ namespace Todo
         }
     }
 }
-
-/// ПОЧИТАТЬ:
-/// методы HTTP
-/// Принципы ООП
-/// Отличия классов и структур
-/// Async/await назначение, что такое Task в net core
-/// Зачем нужен класс Startup.cs, его методы
-/// Зачем нужен класс Program.cs
-/// Middleware
-/// Controller, View, Model
-///
-///
-/// ПОДЕЛАТЬ:
-/// Fluent Api
-/// Регистрация, удаление, редактирование, получение данных пользователя (UserController) 4 метода
-/// Авторизация (AccountController): Login, Logout (Identity)
-/// Задачи привязать к пользователям

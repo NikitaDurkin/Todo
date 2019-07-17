@@ -26,16 +26,16 @@ namespace Todo.Domain.Services
         {
             var result = await _context.Users.ToListAsync();
             var results = _mapper.Map<List<User>, List<UserModel>>(result);
-          
+
             return results;
         }
 
         /// <inheritdoc/>
         public async Task<UserModel> Get(string id)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(a=>a.Id==id);
+            var user = await _context.Users.FirstOrDefaultAsync(a => a.Id == id);
             var userModel = _mapper.Map<UserModel>(user);
-           
+
             return userModel;
         }
 
@@ -48,14 +48,22 @@ namespace Todo.Domain.Services
             return user.Id;
         }
 
+        /// <inheritdoc/>
         public async Task<string> Update(UserModel userModel)
         {
-            var user = _mapper.Map<User>(userModel);
+            var user = await _context.Users.FindAsync(userModel.Id);
+
+            user.Year = userModel.Year;
+            user.Email = userModel.Email;
+            user.UserName = userModel.UserName;
+            user.PhoneNumber = userModel.PhoneNumber;
+
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
             return user.Id;
         }
 
+        /// <inheritdoc/>
         public async Task Delete(string id)
         {
             var user = await _context.Users.FindAsync(id);

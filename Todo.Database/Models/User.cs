@@ -8,11 +8,6 @@ namespace Todo.Database.Models
     /// </summary>
     public class User : IdentityUser
     {
-//        public User(int year)
-//        {
-//            Year = year;
-//        }
-
         public int Year { get; set; }
 
         /// <summary>

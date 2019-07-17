@@ -15,12 +15,12 @@ namespace Todo.Database.Models
         public Guid Guid { get; set; }
 
         /// <summary>
-        /// Имя
+        /// Название задачи
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Выполнено(true/false)
+        /// Выполнено
         /// </summary>
         public bool IsComplete { get; set; }
 

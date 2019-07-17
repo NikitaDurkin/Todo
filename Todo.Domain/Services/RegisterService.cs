@@ -5,7 +5,6 @@ using Todo.Database.Models;
 using Todo.Database.Resources;
 using Todo.Domain.Interfaces;
 using Todo.Domain.Models.Register;
-using Todo.Domain.Models.User;
 
 namespace Todo.Domain.Services
 {
@@ -15,6 +14,7 @@ namespace Todo.Domain.Services
         private readonly IMapper _mapper;
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+
         public RegisterService(IMapper mapper, DatabaseContext context, SignInManager<User> signInManager,
             UserManager<User> userManager)
         {
@@ -24,6 +24,7 @@ namespace Todo.Domain.Services
             _userManager = userManager;
         }
 
+        /// <inheritdoc/>
         public async Task<string> Register(RegisterFullModel registerFullModel)
         {
             var userModel = _mapper.Map<User>(registerFullModel);

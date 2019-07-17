@@ -14,8 +14,10 @@ namespace Todo.Domain.Extensions
         /// <summary/>
         public MappingProfile()
         {
-            CreateMap<User, UserModel>();
-            CreateMap<UserModel, User>();
+            CreateMap<User, UserModel>()
+                .ForSourceMember(a => a.Id, d => d.DoNotValidate());
+            CreateMap<UserModel, User>()
+                .ForSourceMember(a => a.Id, d => d.DoNotValidate());
 
             CreateMap<Item, ItemModel>();
             CreateMap<ItemModel, Item>();

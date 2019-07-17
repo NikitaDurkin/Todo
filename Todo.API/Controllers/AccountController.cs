@@ -5,8 +5,12 @@ using Todo.Database.Models;
 using Todo.Domain.Interfaces;
 using Todo.Domain.Models.Register;
 
+
 namespace Todo.Controllers
 {
+    /// <summary>
+    /// Контроллер регистрации
+    /// </summary>
     [Route("api/account")]
     [ApiController]
     public class AccountController : Controller
@@ -15,13 +19,19 @@ namespace Todo.Controllers
         private readonly SignInManager<User> _signInManager;
         private readonly IRegisterService _registerService;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IRegisterService registerService)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager,
+            IRegisterService registerService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _registerService = registerService;
         }
-        
+
+        /// <summary>
+        /// Регистрация пользователей
+        /// </summary>
+        /// <param name="registerFullModel">Полная модель регистрации</param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<string> Register(RegisterFullModel registerFullModel)
         {

@@ -8,6 +8,7 @@ namespace Todo.Domain.Models.Item
     public class ItemModel
     {
         public Guid Guid { get; set; }
+
         /// <summary>
         /// Имя
         /// </summary>

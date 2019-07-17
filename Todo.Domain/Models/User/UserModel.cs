@@ -2,19 +2,6 @@ namespace Todo.Domain.Models.User
 {
     public class UserModel
     {
-//        public UserModel()
-//        {
-//        }
-//
-//        public UserModel(string id, string userName, string email, string phoneNumber, int year)
-//        {
-//            Id = id;
-//            UserName = userName;
-//            Email = email;
-//            PhoneNumber = phoneNumber;
-//            Year = year;
-//        }
-
         /// <summary>
         /// Унильный идентификатор пользователя
         /// </summary>
