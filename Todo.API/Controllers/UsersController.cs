@@ -47,7 +47,7 @@ namespace Todo.Controllers
         /// <param name="userModel">Модель пользователя</param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<string> Create([FromBody] UserModel userModel)
+        public async Task<string> Create([FromForm] UserModel userModel)
         {
             return await _userService.Create(userModel);
         }
@@ -58,7 +58,7 @@ namespace Todo.Controllers
         /// <param name="userModel">Модель пользователь</param>
         /// <returns></returns>
         [HttpPut]
-        public async Task<string> Update(UserModel userModel)
+        public async Task<string> Update([FromForm] UserModel userModel)
         {
             return await _userService.Update(userModel);
         }

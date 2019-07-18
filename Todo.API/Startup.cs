@@ -13,9 +13,9 @@ using Todo.Database.Models;
 using Todo.Database.Resources;
 using Todo.Domain.Extensions;
 
-
 namespace Todo
 {
+    /// <summary/>
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -25,7 +25,8 @@ namespace Todo
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+
+        /// <summary/>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper();
@@ -47,7 +48,7 @@ namespace Todo
             services.AddMvc();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary/>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

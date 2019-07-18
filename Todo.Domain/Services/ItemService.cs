@@ -10,6 +10,7 @@ using Todo.Domain.Models.Item;
 
 namespace Todo.Domain.Services
 {
+    /// <inheritdoc/>
     public class ItemService : IItemService
     {
         private readonly DatabaseContext _context;
@@ -25,16 +26,14 @@ namespace Todo.Domain.Services
         public async Task<IEnumerable<ItemModel>> GetAll()
         {
             var result = await _context.Items.ToListAsync();
-            var results = _mapper.Map<List<Item>, List<ItemModel>>(result);
-            return results;
+            return _mapper.Map<List<Item>, List<ItemModel>>(result);
         }
 
         /// <inheritdoc/>
         public async Task<ItemModel> Get(Guid guid)
         {
             var item = await _context.Items.FirstOrDefaultAsync(a => a.Guid == guid);
-            var itemModel = _mapper.Map<ItemModel>(item);
-            return itemModel;
+            return _mapper.Map<ItemModel>(item);
         }
 
         /// <inheritdoc/>

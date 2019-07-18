@@ -1,5 +1,8 @@
 namespace Todo.Domain.Models.User
 {
+    /// <summary>
+    /// Модель пользователя
+    /// </summary>
     public class UserModel
     {
         /// <summary>

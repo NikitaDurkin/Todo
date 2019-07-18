@@ -1,5 +1,8 @@
 namespace Todo.Domain.Models.Register
 {
+    /// <summary>
+    /// Модель информации для регистрации
+    /// </summary>
     public class RegisterInfoModel
     {
         /// <summary>

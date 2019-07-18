@@ -1,10 +1,12 @@
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Todo.Domain.Models.User;
 
 namespace Todo.Domain.Interfaces
 {
+    /// <summary>
+    /// Сервис для работы с пользователями
+    /// </summary>
     public interface IUserService
     {
         /// <summary>

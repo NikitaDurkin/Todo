@@ -9,6 +9,7 @@ using Todo.Domain.Models.User;
 
 namespace Todo.Domain.Services
 {
+    /// <inheritdoc/>
     public class UserService : IUserService
     {
         private readonly DatabaseContext _context;
@@ -25,18 +26,14 @@ namespace Todo.Domain.Services
         public async Task<IEnumerable<UserModel>> GetAll()
         {
             var result = await _context.Users.ToListAsync();
-            var results = _mapper.Map<List<User>, List<UserModel>>(result);
-
-            return results;
+            return _mapper.Map<List<User>, List<UserModel>>(result);
         }
 
         /// <inheritdoc/>
         public async Task<UserModel> Get(string id)
         {
             var user = await _context.Users.FirstOrDefaultAsync(a => a.Id == id);
-            var userModel = _mapper.Map<UserModel>(user);
-
-            return userModel;
+            return _mapper.Map<UserModel>(user);
         }
 
         /// <inheritdoc/>

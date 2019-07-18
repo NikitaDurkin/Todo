@@ -11,7 +11,7 @@ namespace Todo.Database.Resources
         {
         }
 
-        public DbSet<Item> Items { get; set; }
-        public DbSet<User> Users { get; set; }
+        public virtual DbSet<Item> Items { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }
